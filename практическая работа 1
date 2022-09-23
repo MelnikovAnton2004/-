@@ -1,0 +1,6 @@
+familia=input("Ваши фамилия, имя, отчество?:")
+vozrast=input("Сколько Вам лет?:")
+mesto=input("Где вы живете:")
+print('Ваше имя' ,familia)
+print('Ваша фамилия' ,vozrast)
+print('Вы живете' ,mesto)
