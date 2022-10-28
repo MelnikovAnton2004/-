@@ -1,0 +1,20 @@
+Вариант 9.
+
+import random as rd
+k=int(input("Введите число k:"))
+r, c=6, 6
+m=[[rd.randit(-100, 100) for j in range(r)] for i in range(c)]
+print(m)
+d=[]
+for n in range(len(m)):
+   for n_2 in range(len(m[0])):
+      if m[n][n_2]%k==0:
+         d.append(m[n][n_2])
+print("кол-во элементов: ", len(d))
+print("Мксимальный элемент: ", max(d))
+mn=100500
+for n in range(len(m)):
+   for n_2 in range(len(m[0])):
+      if abs(m[n][n_2]<abs(mn)):
+         mn=m[n][n_2]
+print("Минимаьный элемент по модулю: ", mn)         
