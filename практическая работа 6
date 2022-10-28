@@ -1,0 +1,27 @@
+Вариант 12.
+1.
+a=[i for i in range(2, 11)]
+m=0
+for i in range(len(a)):
+   if a[i]%2=1:
+      m=a[i]
+      break
+for i in range(len(a)):
+   if a[i]%2==1:
+      if a[i]<m:
+         m=a[i]
+if m!=0:
+   print(m)
+   
+2.
+import random
+n=random.randrage(2, 11)
+a=[random.randrage(1, 10) for i in range(n)]
+b=[random.randrage(1, 10) for i in range(n)]
+print("N:", n)
+print("Первый массив a:\n", a)
+print("Первый массив b:\n", b)
+for i in range(0, n):
+   a[i], b[i]=b[i], a[i]
+print("Преобразованный массив a:\n", a)
+print("Преобразованный массив b:\n", b)   
