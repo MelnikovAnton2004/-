@@ -1,0 +1,38 @@
+вариант 12.
+1.
+def a(n):
+   yield 1
+   i=2
+   while i*i<=n:
+      d, r=divmod(n, i)
+      if r==0:
+         yield i
+         if d==i:
+            break
+         yield d
+      i+=1
+      
+N=int(input())
+sums=[sum(a(i)) for i in range(1, N)]
+
+for i in range(1, N):
+   for j in range(i+1, N):
+      if sums[i-1]==j and sums[j-1]==i:
+         print(i, j)
+         
+         
+         
+2.
+import math
+
+def f(a, b, c):
+   r=1/2*math.sqrt(2*a**2+2*b**2-c**2)
+   m=1/2*math.sqrt(2*a**2+2*c**2-b**2)
+   n=1/2*math.sqrt(2*c**2+2*b**2-a**2)
+   result=str(r)+' '+str(m)+' '+str(n)
+   return result
+   
+a=int(input("Введите длину стороны a = "))
+b=int(input("Введите длину стороны b = "))   
+c=int(input("Введите длину стороны c = "))
+print(f(a, b, c))
